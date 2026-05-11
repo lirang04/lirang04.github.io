@@ -337,6 +337,47 @@ sup { font-size: .75em; }
   }
 }
 
+@media (max-width: 600px) {
+  .layout {
+    padding: 1.75rem 1rem;
+    gap: 2rem;
+  }
+  .sidebar__photo {
+    max-width: 140px;
+  }
+  .sidebar__name {
+    font-size: 1.4rem;
+  }
+  .sidebar__name span { display: inline-block; }   /* keep 李让 inline-clean */
+
+  .main h2 {
+    font-size: 1.2rem;
+    padding-bottom: .35rem;
+  }
+  .main h3 {
+    font-size: .95rem;
+    margin: 1rem 0 .55rem;
+  }
+  .main section { margin-bottom: 1.75rem; }
+
+  /* Publications cards: tighter padding, slightly smaller text */
+  .pubs li {
+    padding: 12px 14px;
+    margin-bottom: .85rem;
+  }
+  .pubs__title { font-size: .98rem; }
+  .pubs__meta,
+  .pubs__venue { font-size: .9rem; }
+  .pubs__links {
+    font-size: .85rem;
+    line-height: 1.85;
+  }
+
+  /* Education entries with logos */
+  .entries__logo { width: 34px; height: 34px; }
+  .entries--with-logo li { gap: .7rem; }
+}
+
 @media (max-width: 480px) {
   .entries .period {
     display: block;
@@ -344,4 +385,9 @@ sup { font-size: .75em; }
     font-size: .82rem;
   }
   .entries .period::before { content: ""; margin: 0; }
+
+  /* prevent very long unbroken strings (like long URLs) from overflowing cards */
+  .pubs__title a,
+  .pubs__meta,
+  .pubs__links { word-break: break-word; }
 }
