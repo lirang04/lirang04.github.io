@@ -233,6 +233,24 @@ sup { font-size: .75em; }
 }
 .entries--tight li { padding: .18rem 0; }
 
+.entries--with-logo li {
+  display: flex;
+  align-items: flex-start;
+  gap: .9rem;
+  padding: .55rem 0;
+}
+.entries__logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  flex-shrink: 0;
+  margin-top: .15rem;
+}
+.entries__content {
+  flex: 1;
+  min-width: 0;
+}
+
 /* ========== PUBLICATIONS ========== */
 .pubs {
   list-style: none;
